@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="task_style.css">
+	<title>Contact</title>
+</head>
+<body style="background-image: url('https://media.istockphoto.com/photos/beauty-home-spa-accessories-banner-flat-lay-on-pink-background-salon-picture-id1256618086?k=20&m=1256618086&s=170667a&w=0&h=zihbrOrRZMHzSqnysXBCsqCHtC7KePCpDAA4NgdMMlk='); background-repeat: no-repeat; background-size: 1400px 750px;">
+
+	<div class="inner-header">
+		<div class="logo"><a href="index.html">BEAUTY LAIR</a></div>
+		<div class="header-link"><a href="Contact.html">Contact</a></div>
+		<div class="header-link"><a href="Services.html">Services</a></div>
+		<div class="header-link"><a href="About_Us.html">About Us</a></div>
+	</div>
+
+	<div class="center">
+<h2> Send Us a Message </h2>
+<form action="Thanks.html" class="main" method="post" name="myform" onsubmit="return(one())">
+<input type="text" placeholder="Name*" name="fname"><br><br>
+<input type="text" placeholder="Contact Number*" name="number"><br><br>
+<input type="text" placeholder="Service Required"><br><br>
+<input type="date"><br><br>
+<input type="time"><br><br>
+<button type ="submit" class="bcont"><a style="color:black; font-size: 15px;">Book Appointment</a></button>
+</form>
+</div>
+<footer>
+<div class="container">
+<center>
+<p>Copyright &copy; Lifestyle Store. All Rights Reserved  |  Contact Us: +91 90000 00000</p>
+</center>
+</div>
+</footer>
+
+<script>
+function one()
+{
+	var fname = document.myform.fname.value ; 
+	var number = document.myform.number.value ; 
+	valid = true;
+	if (fname == "nulll" || fname == "")
+	{
+		alert("Name can't be blank")
+		valid = false;
+	}
+	else if (number == "nulll" || number == "")
+	{
+		alert("Mobile number can't be blank")
+		valid = false;
+	}
+	else if (number.length!=10)
+	{
+		alert("Mobile number should contain 10 digits")
+		valid = false;
+	}
+	else
+	{
+		valid = true;
+	}
+	return valid;
+} 
+</script>
+
+</body>
+</html>
